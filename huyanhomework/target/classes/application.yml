@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    name: sa
+    password: 111111
+  sql:
+    init:
+      mode: always
+  redis:
+    host: localhost
+    port: 6379
+  main:
+    allow-circular-references: true
+#      schema-locations: classpath*:schema.sql,data.sql
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+##    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        show_sql: true
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+
